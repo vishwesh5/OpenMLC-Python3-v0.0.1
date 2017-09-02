@@ -284,7 +284,7 @@ class Population(object):
                             old_indiv = self._mlc_repository.get_individual(indiv_index)
                             new_ind = old_indiv.mutate()
 
-                        except OperationOverIndividualFail, ex:
+                        except OperationOverIndividualFail as ex:
                             lg.logger_.warn(str(ex))
 
                     number, repeated = self._mlc_repository.add_individual(new_ind)
@@ -325,7 +325,7 @@ class Population(object):
                         old_indiv2 = self._mlc_repository.get_individual(indiv_index2)
                         try:
                             new_ind, new_ind2, fail = old_indiv.crossover(old_indiv2)
-                        except OperationOverIndividualFail, ex:
+                        except OperationOverIndividualFail as ex:
                             lg.logger_.warn(str(ex))
 
                     number, repeated = self._mlc_repository.add_individual(new_ind)

@@ -50,7 +50,7 @@ def main():
 
     simulation = Simulation(expName) #checked
     mlc = Application(simulation)
-    mlc.go(to_generation=3, display_best=False)
+    mlc.go(to_generation=50, display_best=True)
     input("Press enter to continue...")
 
 if __name__ == "__main__":
